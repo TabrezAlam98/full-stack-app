@@ -1,10 +1,10 @@
 const mongoose=require("mongoose");
 
-const userSchema=mongoose.Schema({
+const notesSchema=mongoose.Schema({
     name:String,
     price:Number
 })
 
-const UserModel=mongoose.model("user",userSchema)
+const NotesModel=mongoose.model("notes",notesSchema)
 
-module.exports={UserModel}
+module.exports={NotesModel}
