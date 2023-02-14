@@ -4,7 +4,7 @@ const mongoose=require("mongoose");
 const UserSchema=mongoose.Schema({
     name:String,
     email:String,
-    password:Number
+    password:String
 })
 
 const UserModel=mongoose.model("users",UserSchema)
