@@ -1,5 +1,5 @@
 const express = require("express");
-
+require('dotenv').config()
 const app = express();
 app.use(express.json());
 const { connection } = require("./config/db");
@@ -9,7 +9,7 @@ const {usersRoutes}=require("./Routes/users.routes")
 app.use("/notes",notesRoutes)
 app.use("/users",usersRoutes)
 
-app.listen(8500, async () => {
+app.listen(process.env.Port, async () => {
   try {
     await connection;
     console.log("connected");

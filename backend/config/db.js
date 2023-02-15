@@ -1,3 +1,5 @@
 const mongoose=require("mongoose");
-const connection = mongoose.connect("mongodb://127.0.0.1:27017/full_stack");
+require('dotenv').config()
+// const connection = mongoose.connect("mongodb://127.0.0.1:27017/full_stack");
+const connection=mongoose.connect(process.env.mongo_url)
 exports.module={connection};
