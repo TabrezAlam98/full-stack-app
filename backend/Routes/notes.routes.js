@@ -5,6 +5,7 @@ const notesRoutes = express.Router();
 notesRoutes.get("/", async (req, res) => {
   const data = await NotesModel.find();
   res.send(data);
+  
 });
 
 notesRoutes.post("/post", async (req, res) => {
