@@ -1,8 +1,9 @@
 const express = require("express");
 const { NotesModel } = require("../Model/notes.model");
+const {authenticate}=require("../middleware/authentication")
 const notesRoutes = express.Router();
 
-notesRoutes.get("/", async (req, res) => {
+notesRoutes.get("/", authenticate, async(req, res) => {
   const data = await NotesModel.find();
   res.send(data);
   
