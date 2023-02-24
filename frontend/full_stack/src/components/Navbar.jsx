@@ -8,6 +8,8 @@ const Navbar = () => {
     <Spacer/>
     <Text>Homepage</Text>
     <Spacer/>
+    <Text>Homepage</Text>
+    <Spacer/>
     <Text>Product</Text>
     <Spacer/>
     <Text>Signup</Text>
