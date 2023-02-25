@@ -1,14 +1,18 @@
 import React from "react";
 import { Heading, Text, Box, Flex, Spacer } from "@chakra-ui/react";
-import Style from "./Navbar.module.css";
+// import Style from "./Navbar.module.css
+import "./Navbar.css"
 import { Link } from "react-router-dom";
+import {FaBars} from 'react-icons/fa'
+import {ImCross} from 'react-icons/im'
 
 const Navbar = () => {
+  const [mobile,setMobile]=React.useState(false)
   return (
-    <nav className={Style.navbar}>
-      <div className={Style.container}>
-      <h1 className={Style.logo}>Logo</h1>
-      <ul className={Style.nav_links}>
+    <nav className="navbar">
+      <div className="container">
+      <h1 className="logo">Logo</h1>
+      <ul className={mobile?"nav_links_mobile":"nav_links"} onClick={()=>setMobile(false)}>
         <Link to="/">
           <li>Home</li>
         </Link>
@@ -29,6 +33,10 @@ const Navbar = () => {
           <li>Signup</li>
         </Link>
       </ul>
+      <button className="mobile_menu_icons" onClick={()=>setMobile(!mobile)}>
+        {mobile?<ImCross/>:<FaBars/>}
+        
+      </button>
       </div>
     </nav>
     

@@ -13,6 +13,9 @@ li{
     
     list-style: none;
 }
+a{
+    text-decoration: none;
+}
 .navbar{
    
     display: flex;
@@ -47,4 +50,44 @@ li{
 }
 .nav_links Link{
     text-decoration: none;
+}
+button{
+    border:none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.mobile_menu_icons{
+display: none;
+}
+@media (max-width:768px) {
+    
+    .nav_links{
+        display: none;
+    }
+    .nav_links_mobile{
+        position: absolute;
+        display: block;
+        list-style: none;
+        left: 0;
+        top:10%;
+        transition: all 0.5 ease-in-out;
+        width: 100%;
+        background-color: white;
+
+    }
+    ul li{
+        padding: 32px;
+        width: 100%;
+        transition: all 0.5 ease-in-out;
+        text-align: center;
+       
+
+
+    }
+    .mobile_menu_icons{
+        position: absolute;
+        display: block;
+        right: 20px;
+    }
 }
