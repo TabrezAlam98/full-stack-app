@@ -1,6 +1,4 @@
 import React from "react";
-import { Heading, Text, Box, Flex, Spacer } from "@chakra-ui/react";
-// import Style from "./Navbar.module.css
 import "./Navbar.css"
 import { Link } from "react-router-dom";
 import {FaBars} from 'react-icons/fa'
